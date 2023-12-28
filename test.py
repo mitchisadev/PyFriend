@@ -2,6 +2,7 @@ import sys
 import cv2
 import screeninfo
 import speech_recognition as sr
+from gtts import gTTS 
 
 screen = screeninfo.get_monitors()[0]
 width = screen.width
@@ -23,9 +24,9 @@ while True:
 
     with sr.Microphone() as source:
         print("Adjusting noise ")
-        recognizer.adjust_for_ambient_noise(source, duration=1)
+        recognizer.adjust_for_ambient_noise(source, duration = 1)
         print("Recording for 4 seconds")
-        recorded_audio = recognizer.listen(source, timeout=4)
+        recorded_audio = recognizer.listen(source, timeout = 4)
         print("Done recording")
 
     try:
@@ -40,6 +41,8 @@ while True:
     if ask == 'happy':  
         cv2.destroyAllWindows()  
         full_screen_image('happy', screen, happy)
+        speech = gTTS(text = 'i am a happy boy', lang = 'en', slow=False) 
+        speech.save('speech.wav')
         cv2.waitKey(0)
     elif ask == 'angry':
         cv2.destroyAllWindows() 
