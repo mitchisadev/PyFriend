@@ -1,2 +1,5 @@
 # PyFriend
- A friend for your Rasberry Pi
+ A friend made from your Rasberry Pi
+ 
+ ALL SCRIPTS WRITTEN, PRODUCED AND ARARANGED BY
+                MITCHELL O.
