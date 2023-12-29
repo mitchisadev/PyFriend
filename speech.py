@@ -1,7 +1,10 @@
 import speech_recognition as sr
 from gtts import gTTS 
+import openai
 
 class Speech:
+
+    openai.my_api_key = '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'
 
     def __init__(self, detect_length : int) -> None:
         self.detect_length = detect_length
@@ -22,4 +25,7 @@ class Speech:
 
         except Exception as ex:
             return ex
+    
+    def respond():
+        pass
     

@@ -9,7 +9,6 @@ def main():
     result = speechHandler.record()
     
     match result:
-        
         case 'happy':
             displayHandler.show_full_screen_image(result, displayHandler.happy)
         case 'sad':
